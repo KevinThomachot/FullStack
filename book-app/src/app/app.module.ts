@@ -8,13 +8,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { GenreDetailComponent } from './genre-detail/genre-detail.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { GenreAddComponent } from './genre-add/genre-add.component';
+import { FormatComponent } from './format/format.component';
+import { FormatAddComponent } from './format-add/format-add.component';
+import { FormatDetailComponent } from './format-detail/format-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GenreComponent,
     GenreDetailComponent,
-    GenreAddComponent
+    GenreAddComponent,
+    FormatComponent,
+    FormatAddComponent,
+    FormatDetailComponent
   ],
   imports: [
     BrowserModule,

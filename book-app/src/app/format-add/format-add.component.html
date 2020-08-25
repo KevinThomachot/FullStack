@@ -1,0 +1,13 @@
+Create a new Format: 
+<form [formGroup]="createForm" (ngSubmit)="create()">
+    Name: 
+    <input required type="text" formControlName="name">
+    Height:
+    <input required type="number" formControlHeight="height">
+    widht:
+    <input required type="number" formControlWidth="width">
+    landscape:
+    <input required type="checkbox">
+
+    <button type="submit">Create</button>
+</form>

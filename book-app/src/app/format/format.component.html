@@ -1,0 +1,10 @@
+<div *ngIf="formats">
+    <div *ngFor="let format of formats">
+        <a [routerLink]="['/format', format.id]">
+            {{format.name}}
+            {{format.height}}
+            {{format.width}}
+            {{format.landscape}}
+        </a> 
+    </div>
+</div>

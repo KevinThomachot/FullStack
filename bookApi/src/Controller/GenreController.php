@@ -54,7 +54,6 @@ class GenreController extends AbstractController
     {
         $data = $request->getContent();
         if(!empty($data)){
-            //on demande au serializer de deserializer (transformer du json en objet) pour créer notre entité Genre
             $genre = $serializer->deserialize($data, Genre::class, 'json');
             //TODO : vérifier que l'entité deserializée corresponde bien à une entity Genre
             $em = $this->getDoctrine()->getManager();
