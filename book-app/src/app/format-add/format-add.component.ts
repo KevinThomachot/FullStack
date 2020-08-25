@@ -20,8 +20,8 @@ export class FormatAddComponent implements OnInit {
       {
         name: ['', [Validators.required, Validators.maxLength(50)]],
         height: ['', [Validators.required, Validators.maxLength(5)]],
-        wight: ['', [Validators.required, Validators.maxLength(5)]],
-        landscape: ['']
+        width: ['', [Validators.required, Validators.maxLength(5)]],
+        landscape: true,
       }
     )
   }
