@@ -27,4 +27,11 @@ export class FormatComponent implements OnInit {
       }
     )
   }
+
+  delete(format : Format){
+    const formatIndex = this.formats.findIndex(f => f.id === format.id);
+    this.formats = this.formats.filter( (f) => f.id != format.id )
+    this.formatService.delete(format.id).subscribe(() => {console.log("element supprimé")}, 
+    err => this.formats.splice(formatIndex, 0, format))
+  }
 }

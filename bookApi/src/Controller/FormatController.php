@@ -96,7 +96,7 @@ class FormatController extends AbstractController
      */
     public function delete($id)
     {
-        $format = $this->getDoctrine()->getRepository(Genre::class)->find($id);
+        $format = $this->getDoctrine()->getRepository(Format::class)->find($id);
         if ($format) {
             $em = $this->getDoctrine()->getManager();
             $em->remove($format);

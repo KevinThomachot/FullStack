@@ -25,4 +25,8 @@ export class FormatService {
     return this.http.post<Format>(this.url, format);
   }
 
+  delete(id: number): Observable<any>{
+    return this.http.delete(`${this.url}/${id}`);
+  }
+
 }
