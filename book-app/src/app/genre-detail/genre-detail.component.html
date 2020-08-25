@@ -1,0 +1,18 @@
+<div *ngIf="genre">
+    id: {{genre.id}}
+
+    name: 
+    <!-- si on est en mode d'edition on affiche le formulaire -->
+    <div *ngIf="editMode">
+        <form [formGroup]="formEdit" (ngSubmit)="edit()">
+            <input type="text" formControlName="name">
+            <button type="submit">ok</button>
+        </form>
+    </div>
+    <!-- sinon on affiche les données normalement -->
+    <span *ngIf="!editMode">
+        {{genre.name}}
+    </span>
+
+    <button (click)="toggleEdit()">edit</button>
+</div>

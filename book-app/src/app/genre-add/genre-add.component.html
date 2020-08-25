@@ -1,0 +1,15 @@
+Create a new Genre: 
+<form [formGroup]="createForm" (ngSubmit)="create()">
+    Name: 
+    <input required type="text" formControlName="name">
+    <div *ngIf="name.invalid && (name.dirty || name.touched)">
+        <span *ngIf="name.errors.required">
+            Name is required
+        </span>
+        <span *ngIf="name.errors.maxlength">
+            Name must be under 50 chars
+        </span>
+    </div>
+
+    <button type="submit" [disabled]="!createForm.valid">Create</button>
+</form>

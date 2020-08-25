@@ -1,0 +1,8 @@
+<div *ngIf="genres">
+    <div *ngFor="let genre of genres">
+        <a [routerLink]="['/genre', genre.id]">
+            {{genre.name}}
+        </a> 
+        <button (click)="delete(genre)">x</button>
+    </div>
+</div>
